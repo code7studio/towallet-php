@@ -2,7 +2,7 @@
 require_once dirname(__FILE__).'/TowalletObject.php';
 require_once dirname(__FILE__).'/TowalletCurl.php';
 
-define('TOWALLET_API_URL', 'https://towallet.me/api/v1/');
+define('TOWALLET_API_URL', 'http://towallet.me/api/v1/');
 
 class TowalletResource extends TowalletObject
 {
@@ -78,6 +78,8 @@ class TowalletResource extends TowalletObject
     		default:
     		$result = $curl->get($url, $params);
     	}
+
+    	// return $curl->error();
 
         // Decode the JSON response as an associative array.
     	$array = json_decode($result, true);

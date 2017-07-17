@@ -233,18 +233,20 @@ class TowalletCurl {
         if (!empty($vars)) curl_setopt($this->request, CURLOPT_POSTFIELDS, $vars);
 
         # Set some default CURL options
-        curl_setopt($this->request, CURLOPT_HEADER, false);
-        curl_setopt($this->request, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($this->request, CURLINFO_HEADER_OUT, true);
-        curl_setopt($this->request, CURLOPT_AUTOREFERER, true);
-        curl_setopt($this->request, CURLOPT_USERAGENT, $this->user_agent);
+        curl_setopt($this->request, CURLOPT_HEADER, FALSE);
+        curl_setopt($this->request, CURLOPT_RETURNTRANSFER, TRUE);
+        curl_setopt($this->request, CURLINFO_HEADER_OUT, TRUE);
+        curl_setopt($this->request, CURLOPT_AUTOREFERER, TRUE);
+        curl_setopt($this->request, CURLOPT_FAILONERROR, FALSE);
+        curl_setopt($this->request, CURLOPT_SSL_VERIFYPEER, FALSE);
+        curl_setopt($this->request, CURLOPT_SSL_VERIFYHOST, 2);
         curl_setopt($this->request, CURLOPT_USERAGENT, $this->user_agent);
 
         if ($this->cookie_file) {
             curl_setopt($this->request, CURLOPT_COOKIEFILE, $this->cookie_file);
             curl_setopt($this->request, CURLOPT_COOKIEJAR, $this->cookie_file);
         }
-        if ($this->follow_redirects) curl_setopt($this->request, CURLOPT_FOLLOWLOCATION, true);
+        if ($this->follow_redirects) curl_setopt($this->request, CURLOPT_FOLLOWLOCATION, TRUE);
         if ($this->referer) curl_setopt($this->request, CURLOPT_REFERER, $this->referer);
 
         # Set any custom CURL options

@@ -1,4 +1,21 @@
 {
 	"name": "towallet-php",
+	"type": "library",
 	"description": "Towallet API PHP Library",
+	"keywords": ["towallet", "payment"],
+	"homepage": "https://github.com/code7studio/towallet-php.git",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "ToWallet.ME",
+			"email": "towallet.me@gmail.com",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"php": ">=5.3.0"
+	},
+	"autoload": {
+		"classmap": ["lib/towallet/"]
+	}
 }

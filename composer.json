@@ -1,5 +1,5 @@
 {
-	"name": "towallet-php",
+	"name": "code7studio/towallet-php",
 	"type": "library",
 	"description": "Towallet API PHP Library",
 	"keywords": ["towallet", "payment"],

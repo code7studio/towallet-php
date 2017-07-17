@@ -1,4 +1,4 @@
-# towallet-php
+# ToWallet-PHP
 
 ## Installation
 
@@ -9,7 +9,7 @@ You can install the library via [Composer](https://getcomposer.org/). If you don
 * [Composer installation instruction for Windows](https://getcomposer.org/doc/00-intro.md#installation-windows)
 * [Composer installation instruction for Mac OS X and Linux](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)
 
-1. After composer is installed, you can declare towallet-php as a project dependency by creating a `composer.json` at the root of your project directory with the following content:
+1. After composer is installed, you can declare ToWallet-PHP as a project dependency by creating a `composer.json` at the root of your project directory with the following content:
     ```json
     {
       "require": {
@@ -18,7 +18,7 @@ You can install the library via [Composer](https://getcomposer.org/). If you don
     }
     ```
 
-2. Then run the following command to install the towallet-php library:
+2. Then run the following command to install the ToWallet-PHP library:
     ```
     composer install
     ```

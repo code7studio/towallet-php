@@ -2,7 +2,7 @@
 require_once dirname(__FILE__).'/TowalletObject.php';
 require_once dirname(__FILE__).'/TowalletCurl.php';
 
-define('TOWALLET_API_URL', 'https://www.towallet.me/api/v1/');
+define('TOWALLET_API_URL', 'https://towallet.me/api/v1/');
 
 class TowalletResource extends TowalletObject
 {

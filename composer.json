@@ -1,1 +1,4 @@
-
+{
+	"name": "towallet-php",
+	"description": "Towallet API PHP Library",
+}

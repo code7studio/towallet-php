@@ -12,5 +12,4 @@ echo "<pre>";
 print_r ($transaction);
 echo "</pre>";
 
-
-echo "End <br>";
+echo "End";

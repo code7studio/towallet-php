@@ -13,7 +13,7 @@ You can install the library via [Composer](https://getcomposer.org/). If you don
     ```json
     {
       "require": {
-        "code7studio/towallet-php": "dev-master"
+        "towallet/towallet-php": "dev-master"
       }
     }
     ```
@@ -32,7 +32,7 @@ You can install the library via [Composer](https://getcomposer.org/). If you don
     
 ### Manually
 
-If you're not using Composer, you can also download [ToWallet-PHP](https://github.com/code7studio/towallet-php/archive/master.zip).
+If you're not using Composer, you can also download [ToWallet-PHP](https://github.com/towallet/towallet-php/archive/master.zip).
 Then, follows the instruction below to install **ToWallet-PHP** to the project.
 
 1. Extract the library to your project.

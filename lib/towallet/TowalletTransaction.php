@@ -13,7 +13,7 @@ class TowalletTransaction extends TowalletResource
      * @param  [type] $secretkey [description]
      * @return [type]            [description]
      */
-    public static function get($params, $publickey = null, $secretkey = null)
+    public static function get($params = null, $publickey = null, $secretkey = null)
     {
         return parent::r_get(get_class(), self::getUrl(), $params, $publickey, $secretkey);
     }

@@ -12,11 +12,6 @@ class TowalletResource extends TowalletObject
 	const REQUEST_PUT     	= 'PUT';
 	const REQUEST_DELETE    = 'DELETE';
 
-    // Timeout settings
-	private $CONNECTTIMEOUT = 30;
-	private $TIMEOUT = 60;
-
-
 	protected static function getInstance($class, $publickey = null, $secretkey = null)
 	{
 		if (class_exists($class)) {
@@ -57,29 +52,13 @@ class TowalletResource extends TowalletObject
 
     	$curl = new TowalletCurl;
 
-    	$curl->headers['API-KEY'] = $skey;
-    	$curl->options['CURLOPT_USERPWD'] = $key;
-    	$curl->options['CURLOPT_TIMEOUT'] = $this->TIMEOUT;
-    	$curl->options['CURLOPT_CONNECTTIMEOUT'] = $this->CONNECTTIMEOUT;
+    	$curl->create($url, $params);
+    	$curl->option('USERPWD', $key);
+    	$curl->http_header('API-KEY', $skey);
+    	$curl->http_method($method);
+    	$result = $curl->execute();
 
-    	switch (strtoupper($method)) {
-    		case 'GET':
-    		$result = $curl->get($url, $params);
-    		break;
-    		case 'POST':
-    		$result = $curl->post($url, $params);
-    		break;
-    		case 'PUT':
-    		$result = $curl->put($url, $params);
-    		break;
-    		case 'DELETE':
-    		$result = $curl->delete($url, $params);
-    		break;
-    		default:
-    		$result = $curl->get($url, $params);
-    	}
-
-    	// return $curl->error();
+    	// return $curl->debug();
 
         // Decode the JSON response as an associative array.
     	$array = json_decode($result, true);

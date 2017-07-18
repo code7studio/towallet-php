@@ -29,3 +29,34 @@ You can install the library via [Composer](https://getcomposer.org/). If you don
     ```php
     require_once dirname(__FILE__).'/vendor/autoload.php';
     ```
+    
+### Manually
+
+If you're not using Composer, you can also download [ToWallet-PHP](https://github.com/code7studio/towallet-php/archive/master.zip).
+Then, follows the instruction below to install **ToWallet-PHP** to the project.
+
+1. Extract the library to your project.
+
+2. Then, include the following line into your PHP file, 
+    ```php
+    require_once dirname(__FILE__).'/towallet-php/lib/Towallet.php';
+    ```
+
+3. Now you are ready to start using the library
+
+## Quick Start
+
+Now from the above sections, your code will looks similar like the below.
+
+```php
+require_once dirname(__FILE__).'/vendor/autoload.php';
+
+define('TOWALLET_PUBLIC_KEY', 'pkey-xxxxxxxxxx');
+define('TOWALLET_SECRET_KEY', 'skey-xxxxxxxxxx');
+```
+
+```php
+$transaction = TowalletTransaction::get(array(
+    'invoice_id'   => 'M12345678'
+));
+```
